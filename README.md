@@ -76,7 +76,9 @@ On the top menu, the user will also be able to save the current chat history. Th
 ## Authors
 
   
-| By  Sourav Bera | By A S V K Vinayak | By Swastik Mishra |
+* Sourav Bera 
+* A S V K Vinayak 
+* Swastik Mishra 
   
 
 
