@@ -1,4 +1,4 @@
-# Peer to Peer Chat
+# Socket Chat
 
   
 
@@ -142,24 +142,11 @@ Also don't forget to restart app if the messaging is not functioning properly.
 ## Authors
 
   
-
-*  **NAZIA TASNIM**    [Appledora](https://github.com/appledora/)
-
-*  **ISTIAK SHIHAB**   [istiakshihab](https://github.com/istiakshihab)
+| ------ | ------ | ------ |
+| By  Sourav Bera | By A S V K Vinayak | By Swastik Mishra |
 
   
 
-## Acknowledgments
-
-  
-
-* [Manug Gond](https://github.com/3ZadeSSG)
-
-* [Quadflask](https://github.com/QuadFlask/colorpicker)
-
-* [Glide](https://github.com/bumptech/glide)
-
-* the numerous StackOverflow altruists
 
 <a href="https://trackgit.com">
 <img src="https://sfy.cx/u/o7s" alt="trackgit-views" />
