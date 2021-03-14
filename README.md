@@ -35,7 +35,7 @@ After the Application is launched user will be presented with this screen where 
 
   
 
-<p  align="center"  ><img  src="https://i.imgur.com/CZLDVKI.png"  width = "200"  height = "400"/></p>
+<p  align="center"  ><img  src="https://github.com/Zeo-shark/Socket-chat/blob/main/assets/Socketchat.png"  width = "200"  height = "400"/></p>
 
 I
 
@@ -63,72 +63,6 @@ On the top menu, the user will also be able to save the current chat history. Th
 <p align="center"><img  src="https://i.imgur.com/3s7tXJh.png"  width = "200"  height = "400"/> 
 </figure></p>
 
-### Client Socket Code
-
-    public class User extends AsyncTask<Void, Void, String> {  
-      String msg;  
-      
-      User(String message) {  
-	      msg = message;  
-        }  
-      
-      @Override  
-      protected String doInBackground(Void... voids) {  
-      try {  
-      String ipadd = serverIpAddress;  
-                int portr = sendPort;  
-                Socket clientSocket = new Socket(ipadd, portr);  
-                OutputStream outToServer = clientSocket.getOutputStream();  
-                PrintWriter output = new PrintWriter(outToServer);  
-                output.println(msg);  
-                output.flush();  
-                clientSocket.close();  
-                runOnUiThread(() -> sent.setEnabled(false)  
-     );  
-            } catch (Exception e) {  
-      e.printStackTrace();  
-            }  
-      return msg;  
-        }  
-      
-      protected void onPostExecute(String result) {  
-      runOnUiThread(() -> sent.setEnabled(true));  
-            Log.i(TAG, "on post execution result => " + result);  
-            }  
-     }  
-      
-    }
-
-`
-
-### Server Socket Code
-
-      public void run() {  
-      try {  
-      ServerSocket initSocket = new ServerSocket(port);  
-            initSocket.setReuseAddress(true);  
-            TextView textView;  
-            textView = activity.findViewById(R.id.textView);  
-            textView.setText("Server Socket Started at IP: " + ownIp + " and Port: " + port);  
-            textView.setBackgroundColor(Color.parseColor("#39FF14"));  
-            System.out.println(TAG + "started");  
-            while (!Thread.interrupted()) {  
-      Socket connectSocket = initSocket.accept();  
-                ReadFromClient handle = new ReadFromClient();  
-                handle.execute(connectSocket);  
-            }  
-      initSocket.close();  
-        } catch (IOException e) {  
-      TextView textView;  
-            textView = activity.findViewById(R.id.textView);  
-            textView.setText("Server Socket initialization failed. Port already in use.");  
-            textView.setBackgroundColor(Color.parseColor("#FF0800"));  
-            e.printStackTrace();  
-        }  
-    }
-
-
-Also don't forget to restart app if the messaging is not functioning properly.
 ## Built With
 
 * <a href="https://docs.oracle.com/javase/7/docs/api/java/net/Socket.html">Java Socket</a>
@@ -142,12 +76,8 @@ Also don't forget to restart app if the messaging is not functioning properly.
 ## Authors
 
   
-| ------ | ------ | ------ |
 | By  Sourav Bera | By A S V K Vinayak | By Swastik Mishra |
-
   
 
 
-<a href="https://trackgit.com">
-<img src="https://sfy.cx/u/o7s" alt="trackgit-views" />
-</a>
+
